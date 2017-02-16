@@ -9,3 +9,9 @@ body{
   font-family: 'Comfortaa', sans-serif;
   font-weight: 100;
 }
+
+.line{
+	fill: none;
+	stroke: steelblue;
+	stroke-width: 2px;
+}
