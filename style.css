@@ -1,0 +1,11 @@
+body{
+  text-align: center;
+  display: block;
+  background: #fff;
+/*  background: -webkit-linear-gradient(#FFDBCC, #FFFFCC); 
+  background: -o-linear-gradient(#FFDBCC, #FFFFCC); 
+  background: -moz-linear-gradient(#FFDBCC, #FFFFCC); 
+  background: linear-gradient(#FFDBCC, #FFFFCC); */
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 100;
+}
