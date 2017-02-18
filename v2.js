@@ -47,53 +47,56 @@ var svg = d3.select("#vis2").append("svg")
 			var dt = new Date(d["Start Date"]);
 			var mth = dt.getMonth();
 			var dr = d["Duration"]/60;
-			if(mth == 0){
-				drjan += dr;
-				jan++;
-			}
-			else if(mth == 1){
-				drfeb += dr;
-				feb++;
-			}
-			else if(mth == 2){
-				drmar += dr;
-				mar++;
-			}
-			else if(mth == 3){
-				drapr += dr;
-				apr++;
-			}
-			else if(mth == 4){
-				drmay += dr;
-				may++;
-			}
-			else if(mth == 5){
-				drjun += dr;
-				jun++;
-			}
-			else if(mth == 6){
-				drjul += dr;
-				jul++;
-			}
-			else if(mth == 7){
-				draug += dr;
-				aug++;
-			}
-			else if(mth == 8){
-				drsep += dr;
-				sep++;
-			}
-			else if(mth == 9){
-				droct += dr;
-				oct++;
-			}
-			else if (mth == 10){
-				drnov += dr;
-				nov++;
-			}
-			else if(mth == 11){
-				drdec += dr;
-				dec++;
+			var zip = d["Zip Code"];
+			if(zip == "94107"){
+				if(mth == 0){
+					drjan += dr;
+					jan++;
+				}
+				else if(mth == 1){
+					drfeb += dr;
+					feb++;
+				}
+				else if(mth == 2){
+					drmar += dr;
+					mar++;
+				}
+				else if(mth == 3){
+					drapr += dr;
+					apr++;
+				}
+				else if(mth == 4){
+					drmay += dr;
+					may++;
+				}
+				else if(mth == 5){
+					drjun += dr;
+					jun++;
+				}
+				else if(mth == 6){
+					drjul += dr;
+					jul++;
+				}
+				else if(mth == 7){
+					draug += dr;
+					aug++;
+				}
+				else if(mth == 8){
+					drsep += dr;
+					sep++;
+				}
+				else if(mth == 9){
+					droct += dr;
+					oct++;
+				}
+				else if (mth == 10){
+					drnov += dr;
+					nov++;
+				}
+				else if(mth == 11){
+					drdec += dr;
+					dec++;
+				}
 			}
 		})	
 	var months = [];
@@ -115,9 +118,9 @@ console.log(months);
 		.y(function(d){return y(d.avg);});
 
 	x.domain(d3.extent(months,function(d){return d.num;}));
-	y.domain(d3.extent(months, function(d){return d.avg;}));
+	// y.domain(d3.extent(months, function(d){return d.avg;}));
 
-	// y.domain([0,d3.max(months, function(d){return d.avg;})]);
+	y.domain([0,d3.max(months, function(d){return d.avg;})]);
 	svg.append("path")
 		.data([months])
 		.attr("class", "line")
