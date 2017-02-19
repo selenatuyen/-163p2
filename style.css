@@ -15,3 +15,13 @@ body{
 	stroke: steelblue;
 	stroke-width: 2px;
 }
+
+.links line {
+  stroke: #aaa;
+}
+
+.nodes circle {
+  pointer-events: all;
+  stroke: none;
+  stroke-width: 40px;
+}

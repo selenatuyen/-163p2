@@ -76,7 +76,7 @@ function v3() {
 			.attr("dy", ".71em")
 			.style("text-anchor", "end")
 			.text("Average Temperature (Farenheit");
-		console.log(temps);	
+		// console.log(temps);	
 		})
 }
 v3();
