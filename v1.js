@@ -1,4 +1,4 @@
-//network of cities with destination and source
+//forced network version
 function v1() {
 	var width = 960;
     var	height = 500;
