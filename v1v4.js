@@ -83,15 +83,15 @@ function v1() {
 			.attr("x2", 230)
 			.attr("y2", 368)
 			.attr("stroke-width", station9[0]/6)
-			.attr("stroke", "red")
+			.attr("stroke", "#f9757c")
 			.attr("fill", "black");	
 		svg.append("line")
 			.attr("x1", 700)
-			.attr("y1", 278)
+			.attr("y1", 270)
 			.attr("x2", 500)
-			.attr("y2", 434)
+			.attr("y2", 460)
 			.attr("stroke-width", station9[13]/6)
-			.attr("stroke", "red")
+			.attr("stroke", "#f9757c")
 			.attr("fill", "black");
 		svg.append("line")
 			.attr("x1", 700)
@@ -99,40 +99,40 @@ function v1() {
 			.attr("x2", 500)
 			.attr("y2", 70)
 			.attr("stroke-width", station9[14]/6)
-			.attr("stroke", "red")
+			.attr("stroke", "#f9757c")
 			.attr("fill", "black");
 		svg.append("line")
 			.attr("x1", 700)
 			.attr("y1", 220)
-			.attr("x2", 339)
+			.attr("x2", 250)
 			.attr("y2", 150)
 			.attr("stroke-width", station9[15]/6)
-			.attr("stroke", "red")
+			.attr("stroke", "#f9757c")
 			.attr("fill", "black");			
 //station 2 lines --- purple
 		svg.append("line")
 			.attr("x1", 227)
-			.attr("y1", 300)
+			.attr("y1", 320)
 			.attr("x2", 700)
 			.attr("y2", 240)
 			.attr("stroke-width", station2[7]/6)
-			.attr("stroke", "purple")
+			.attr("stroke", "#7a7671")
 			.attr("fill", "black"); 
 		svg.append("line")
-			.attr("x1", 170)
-			.attr("y1", 350)
-			.attr("x2", 300)
+			.attr("x1", 210)
+			.attr("y1", 310)
+			.attr("x2", 280)
 			.attr("y2", 150)
 			.attr("stroke-width", station2[15]/6)
-			.attr("stroke", "purple")
+			.attr("stroke", "#7a7671")
 			.attr("fill", "black"); 			
 		svg.append("line")
 			.attr("x1", 280)
-			.attr("y1", 370)
+			.attr("y1", 380)
 			.attr("x2", 500)
 			.attr("y2", 460)
 			.attr("stroke-width", station2[13]/6)
-			.attr("stroke", "purple")
+			.attr("stroke", "#7a7671")
 			.attr("fill", "black"); 	
 //station 16 lines --- green
 		svg.append("line")
@@ -141,7 +141,7 @@ function v1() {
 			.attr("x2", 500)
 			.attr("y2", 480)
 			.attr("stroke-width", station16[0]/6)
-			.attr("stroke", "green")
+			.attr("stroke", "#66b78f")
 			.attr("fill", "black"); 
 		svg.append("line")
 			.attr("x1", 500)
@@ -149,7 +149,7 @@ function v1() {
 			.attr("x2", 700)
 			.attr("y2", 280)
 			.attr("stroke-width", station16[7]/6)
-			.attr("stroke", "green")
+			.attr("stroke", "#66b78f")
 			.attr("fill", "black");
 		svg.append("line")
 			.attr("x1", 500)
@@ -157,7 +157,7 @@ function v1() {
 			.attr("x2", 500)
 			.attr("y2", 80)
 			.attr("stroke-width", station16[14]/6)
-			.attr("stroke", "green")
+			.attr("stroke", "#66b78f")
 			.attr("fill", "black"); 	
 //station 84 lines --- blue
 	svg.append("line")
@@ -166,7 +166,7 @@ function v1() {
 			.attr("x2", 700)
 			.attr("y2", 230)
 			.attr("stroke-width", station84[7]/6)
-			.attr("stroke", "blue")
+			.attr("stroke", "#5589a0")
 			.attr("fill", "black");
 	svg.append("line")
 			.attr("x1", 300)
@@ -174,7 +174,7 @@ function v1() {
 			.attr("x2", 240)
 			.attr("y2", 350)
 			.attr("stroke-width", station84[0]/6)
-			.attr("stroke", "blue")
+			.attr("stroke", "#5589a0")
 			.attr("fill", "black"); 	
 	svg.append("line")
 			.attr("x1", 300)
@@ -182,23 +182,49 @@ function v1() {
 			.attr("x2", 500)
 			.attr("y2", 450)
 			.attr("stroke-width", station84[13]/6)
-			.attr("stroke", "blue")
+			.attr("stroke", "#5589a0")
 			.attr("fill", "black"); 
 	svg.append("line")
 			.attr("x1", 300)
-			.attr("y1", 150)
+			.attr("y1", 170)
 			.attr("x2", 500)
-			.attr("y2", 70)
+			.attr("y2", 97)
 			.attr("stroke-width", station84[14]/6)
-			.attr("stroke", "blue")
+			.attr("stroke", "#5589a0")
 			.attr("fill", "black"); 							
+//station 80 lines --- orange
+	svg.append("line")
+			.attr("x1", 500)
+			.attr("y1", 40)
+			.attr("x2", 700)
+			.attr("y2", 210)
+			.attr("stroke-width", station80[7]/6)
+			.attr("stroke", "#ffbd68")
+			.attr("fill", "black"); 
+	svg.append("line")
+			.attr("x1", 520)
+			.attr("y1", 40)
+			.attr("x2", 520)
+			.attr("y2", 450)
+			.attr("stroke-width", station80[13]/6)
+			.attr("stroke", "#ffbd68")
+			.attr("fill", "black"); 
+	svg.append("line")
+			.attr("x1", 510)
+			.attr("y1", 50)
+			.attr("x2", 300)
+			.attr("y2", 130)
+			.attr("stroke-width", station80[15]/6)
+			.attr("stroke", "#ffbd68")
+			.attr("fill", "black"); 
+
 //======stations============
 		//station 2
 		svg.append("circle")
 			.attr("cx", 230)
 			.attr("cy", 350)
 			.attr("r", sum2/6)
-			.style("fill", "purple")
+			.style("fill", "#7a7671")
 			.append("title")
 			.text("2, index:0");
 		//station 9
@@ -206,7 +232,7 @@ function v1() {
 			.attr("cx", 700)
 			.attr("cy", 250)
 			.attr("r", sum9/6)
-			.style("fill", "red")
+			.style("fill", "#f9757c")
 			.append("title")
 			.text("9, index:7");
 		//station 16
@@ -214,7 +240,7 @@ function v1() {
 			.attr("cx", 500)
 			.attr("cy", 450)
 			.attr("r", sum16/6)
-			.style("fill", "green")
+			.style("fill", "#66b78f")
 			.append("title")
 			.text("16, index:13");
 		//station 80
@@ -222,7 +248,7 @@ function v1() {
 			.attr("cx", 500)
 			.attr("cy", 70)
 			.attr("r", sum80/6)
-			.style("fill", "orange")
+			.style("fill", "#ffbd68")
 			.append("title")
 			.text("80, index:14");		
 		//station 84
@@ -230,8 +256,8 @@ function v1() {
 			.attr("cx", 300)
 			.attr("cy", 150)
 			.attr("r", sum84/6)
-			.style("fill", "blue")
+			.style("fill", "#5589a0")
 			.append("title")
-			.text("84, index:15");								 	 	
+			.text("84, index:15");	
 }
 v1();

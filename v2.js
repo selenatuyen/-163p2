@@ -48,7 +48,7 @@ var svg = d3.select("#vis2").append("svg")
 			var mth = dt.getMonth();
 			var dr = d["Duration"]/60;
 			var zip = d["Zip Code"];
-			if(zip == "94107"){
+			if(zip == "95113"){
 				if(mth == 0){
 					drjan += dr;
 					jan++;
