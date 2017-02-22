@@ -31,6 +31,9 @@ function v1() {
 		links: []
 	}; 
 
+	var color = d3.scaleOrdinal().range(["#7a7671", "#f9757c", "#66b78f", "#ffbd68", "#5589a0"]);
+	var legendData = ["Station 2", "Station 9", "Station 16", "Station 80", "Station 84"];
+
 	var station2 = [0,12,6,2,43,65,3,173,3,28,12,10,6,89,0,90,0,0];
 	var station3 = [1,0,0,1,1,2,0,5,1,0,2,3,0,3,0,1,0,0];
 	var station4 = [7,2,0,1,2,9,3,5,0,1,29,1,1,2,0,0,0,0];
@@ -259,5 +262,30 @@ function v1() {
 			.style("fill", "#5589a0")
 			.append("title")
 			.text("84, index:15");	
+var legend = svg.append("g")
+			.attr("class", "legend")
+			.attr("x", 800)
+			.attr("y", 200)
+			.attr("height", 500)
+			.attr("width", 100);
+		legend.selectAll("g").data(legendData)
+			.enter()
+			.append("g")
+			.each(function(d, i){
+				var g = d3.select(this);
+				g.append("rect")
+					.attr("x", 720)
+					.attr("y", i*35+160)
+					.attr("width", 10)
+					.attr("height", 10)
+					.style("fill", function(d){return color(i);});
+
+				g.append("text")
+					.attr("x", 745)
+					.attr("y", i*35+170)
+					.attr("height", 10)
+					.text(function(d){return legendData[i]});
+
+			})
 }
 v1();
