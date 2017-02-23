@@ -2,10 +2,6 @@ body{
   text-align: center;
   display: block;
   background: #fff;
-/*  background: -webkit-linear-gradient(#FFDBCC, #FFFFCC); 
-  background: -o-linear-gradient(#FFDBCC, #FFFFCC); 
-  background: -moz-linear-gradient(#FFDBCC, #FFFFCC); 
-  background: linear-gradient(#FFDBCC, #FFFFCC); */
   font-family: 'Comfortaa', sans-serif;
   font-weight: 100;
 }
@@ -24,4 +20,17 @@ body{
   pointer-events: all;
   stroke: none;
   stroke-width: 40px;
+}
+
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 60px;                  
+  height: 20px;                 
+  padding: 2px;             
+  font: 12px sans-serif;        
+  background: #8585ad;   
+  border: 0px;      
+  border-radius: 8px;           
+  pointer-events: none;         
 }

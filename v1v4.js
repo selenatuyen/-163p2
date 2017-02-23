@@ -6,6 +6,10 @@ function v1() {
 	var svg = d3.select("body").append("svg")
 	    .attr("width", width)
 	    .attr("height", height);
+	
+	var div = d3.select("body").append("div")   
+	    .attr("class", "tooltip")               
+	    .style("opacity", 0);
 
 	var jsonObjs = {
 		nodes: [
@@ -74,11 +78,11 @@ function v1() {
 		function add(a, b) {
 		    return a + b;
 		}
-	console.log("station 2- "+ "9:" + station2[7] + ", 16:" + station2[13] + ", 80:" + station2[14] + ", 84:" + station2[15]);
-	console.log("station 9- "+ "2:" + station9[0] + ", 16:" + station9[13] + ", 80:" + station9[14] + ", 84:" + station9[15]);
-	console.log("station 16- "+ "2:" + station16[0] + ", 9:" + station16[7] + ", 80:" + station16[14] + ", 84:" + station16[15]);
-	console.log("station 80- "+ "2:" + station80[0] + ", 9:" + station80[7] + ", 16:" + station80[13] + ", 84:" + station80[15]);
-	console.log("station 84- "+ "2:" + station84[0] + ", 9:" + station84[7] + ", 16:" + station84[13] + ", 80:" + station84[14]);
+	console.log("station 2- "+ "9:" + station2[7] + ", 16:" + station2[13] + ", 80:" + station2[14] + ", 84:" + station2[15] + " sum:" + sum2);
+	console.log("station 9- "+ "2:" + station9[0] + ", 16:" + station9[13] + ", 80:" + station9[14] + ", 84:" + station9[15] + " sum:" + sum9);
+	console.log("station 16- "+ "2:" + station16[0] + ", 9:" + station16[7] + ", 80:" + station16[14] + ", 84:" + station16[15] + " sum:" + sum16);
+	console.log("station 80- "+ "2:" + station80[0] + ", 9:" + station80[7] + ", 16:" + station80[13] + ", 84:" + station80[15] + " sum:" + sum80);
+	console.log("station 84- "+ "2:" + station84[0] + ", 9:" + station84[7] + ", 16:" + station84[13] + ", 80:" + station84[14] + " sum:" + sum84);
 	//station 9 lines --- red			
 		svg.append("line")
 			.attr("x1", 700)
@@ -87,31 +91,79 @@ function v1() {
 			.attr("y2", 368)
 			.attr("stroke-width", station9[0]/6)
 			.attr("stroke", "#f9757c")
-			.attr("fill", "black");	
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station9[0] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});
 		svg.append("line")
 			.attr("x1", 700)
 			.attr("y1", 270)
 			.attr("x2", 500)
 			.attr("y2", 460)
-			.attr("stroke-width", station9[13]/6)
+			.attr("stroke-width", station9[13]/4)
 			.attr("stroke", "#f9757c")
-			.attr("fill", "black");
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station9[13] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});
 		svg.append("line")
 			.attr("x1", 700)
 			.attr("y1", 250)
 			.attr("x2", 500)
 			.attr("y2", 70)
-			.attr("stroke-width", station9[14]/6)
+			.attr("stroke-width", station9[14])
 			.attr("stroke", "#f9757c")
-			.attr("fill", "black");
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station9[14] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});
 		svg.append("line")
 			.attr("x1", 700)
 			.attr("y1", 220)
 			.attr("x2", 250)
 			.attr("y2", 150)
-			.attr("stroke-width", station9[15]/6)
+			.attr("stroke-width", station9[15]/4)
 			.attr("stroke", "#f9757c")
-			.attr("fill", "black");			
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station9[15] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});		
 //station 2 lines --- purple
 		svg.append("line")
 			.attr("x1", 227)
@@ -120,7 +172,19 @@ function v1() {
 			.attr("y2", 240)
 			.attr("stroke-width", station2[7]/6)
 			.attr("stroke", "#7a7671")
-			.attr("fill", "black"); 
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station2[7] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});
 		svg.append("line")
 			.attr("x1", 210)
 			.attr("y1", 310)
@@ -128,7 +192,19 @@ function v1() {
 			.attr("y2", 150)
 			.attr("stroke-width", station2[15]/6)
 			.attr("stroke", "#7a7671")
-			.attr("fill", "black"); 			
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station2[15] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});			
 		svg.append("line")
 			.attr("x1", 280)
 			.attr("y1", 380)
@@ -136,7 +212,19 @@ function v1() {
 			.attr("y2", 460)
 			.attr("stroke-width", station2[13]/6)
 			.attr("stroke", "#7a7671")
-			.attr("fill", "black"); 	
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station2[13] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});	
 //station 16 lines --- green
 		svg.append("line")
 			.attr("x1", 230)
@@ -145,23 +233,59 @@ function v1() {
 			.attr("y2", 480)
 			.attr("stroke-width", station16[0]/6)
 			.attr("stroke", "#66b78f")
-			.attr("fill", "black"); 
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station16[0] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});
 		svg.append("line")
 			.attr("x1", 500)
 			.attr("y1", 490)
 			.attr("x2", 700)
 			.attr("y2", 280)
-			.attr("stroke-width", station16[7]/6)
+			.attr("stroke-width", station16[7]/4)
 			.attr("stroke", "#66b78f")
-			.attr("fill", "black");
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station16[7] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});
 		svg.append("line")
 			.attr("x1", 500)
 			.attr("y1", 490)
 			.attr("x2", 500)
 			.attr("y2", 80)
-			.attr("stroke-width", station16[14]/6)
+			.attr("stroke-width", station16[14])
 			.attr("stroke", "#66b78f")
-			.attr("fill", "black"); 	
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station16[14] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});	
 //station 84 lines --- blue
 	svg.append("line")
 			.attr("x1", 300)
@@ -170,7 +294,19 @@ function v1() {
 			.attr("y2", 230)
 			.attr("stroke-width", station84[7]/6)
 			.attr("stroke", "#5589a0")
-			.attr("fill", "black");
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station84[7] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			}); 
 	svg.append("line")
 			.attr("x1", 300)
 			.attr("y1", 180)
@@ -178,15 +314,39 @@ function v1() {
 			.attr("y2", 350)
 			.attr("stroke-width", station84[0]/6)
 			.attr("stroke", "#5589a0")
-			.attr("fill", "black"); 	
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station84[0] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			}); 	
 	svg.append("line")
 			.attr("x1", 300)
 			.attr("y1", 180)
 			.attr("x2", 500)
 			.attr("y2", 450)
-			.attr("stroke-width", station84[13]/6)
+			.attr("stroke-width", station84[13])
 			.attr("stroke", "#5589a0")
-			.attr("fill", "black"); 
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station84[13] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			}); 
 	svg.append("line")
 			.attr("x1", 300)
 			.attr("y1", 170)
@@ -194,24 +354,60 @@ function v1() {
 			.attr("y2", 97)
 			.attr("stroke-width", station84[14]/6)
 			.attr("stroke", "#5589a0")
-			.attr("fill", "black"); 							
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station84[14] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			}); 						
 //station 80 lines --- orange
 	svg.append("line")
 			.attr("x1", 500)
 			.attr("y1", 40)
 			.attr("x2", 700)
 			.attr("y2", 210)
-			.attr("stroke-width", station80[7]/6)
+			.attr("stroke-width", station80[7]/4)
 			.attr("stroke", "#ffbd68")
-			.attr("fill", "black"); 
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station80[7] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			}); 
 	svg.append("line")
 			.attr("x1", 520)
 			.attr("y1", 40)
 			.attr("x2", 520)
 			.attr("y2", 450)
-			.attr("stroke-width", station80[13]/6)
+			.attr("stroke-width", station80[13])
 			.attr("stroke", "#ffbd68")
-			.attr("fill", "black"); 
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station80[13] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			}); 
 	svg.append("line")
 			.attr("x1", 510)
 			.attr("y1", 50)
@@ -219,7 +415,20 @@ function v1() {
 			.attr("y2", 130)
 			.attr("stroke-width", station80[15]/6)
 			.attr("stroke", "#ffbd68")
-			.attr("fill", "black"); 
+			.on("mouseover", function(d){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(station80[15] + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY) + "px");
+			})
+			.on("mouseout", function(d){
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});
+
 
 //======stations============
 		//station 2
@@ -228,41 +437,52 @@ function v1() {
 			.attr("cy", 350)
 			.attr("r", sum2/6)
 			.style("fill", "#7a7671")
-			.append("title")
-			.text("2, index:0");
+			.on("click", function(){
+				d3.selectAll("svg").remove();
+				v2(2);
+			}); 
 		//station 9
 		svg.append("circle")
 			.attr("cx", 700)
 			.attr("cy", 250)
 			.attr("r", sum9/6)
 			.style("fill", "#f9757c")
-			.append("title")
-			.text("9, index:7");
+			.on("click", function(){
+				d3.selectAll("svg").remove();
+				v2(9);
+			});
 		//station 16
 		svg.append("circle")
 			.attr("cx", 500)
 			.attr("cy", 450)
 			.attr("r", sum16/6)
 			.style("fill", "#66b78f")
-			.append("title")
-			.text("16, index:13");
+			.on("click", function(){
+				d3.selectAll("svg").remove();
+				v2(16);
+			});
 		//station 80
 		svg.append("circle")
 			.attr("cx", 500)
 			.attr("cy", 70)
 			.attr("r", sum80/6)
 			.style("fill", "#ffbd68")
-			.append("title")
-			.text("80, index:14");		
+			.on("click", function(){
+				d3.selectAll("svg").remove();
+				v2(80);
+			});		
 		//station 84
 		svg.append("circle")
 			.attr("cx", 300)
 			.attr("cy", 150)
 			.attr("r", sum84/6)
 			.style("fill", "#5589a0")
-			.append("title")
-			.text("84, index:15");	
-var legend = svg.append("g")
+			.on("click", function(){
+				d3.selectAll("svg").remove();
+				v2(84);
+			});	
+
+		var legend = svg.append("g")
 			.attr("class", "legend")
 			.attr("x", 800)
 			.attr("y", 200)
@@ -274,18 +494,16 @@ var legend = svg.append("g")
 			.each(function(d, i){
 				var g = d3.select(this);
 				g.append("rect")
-					.attr("x", 720)
+					.attr("x", 820)
 					.attr("y", i*35+160)
 					.attr("width", 10)
 					.attr("height", 10)
 					.style("fill", function(d){return color(i);});
-
 				g.append("text")
-					.attr("x", 745)
+					.attr("x", 845)
 					.attr("y", i*35+170)
 					.attr("height", 10)
 					.text(function(d){return legendData[i]});
-
-			})
+		})
 }
 v1();

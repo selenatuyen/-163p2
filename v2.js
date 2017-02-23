@@ -1,5 +1,5 @@
 //line w/ yearly points of avg trip durations
-function v2() {
+function v2(stationid) {
 	var margin = {top: 20, right: 20, bottom: 30, left: 60},
 		width = 960 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
@@ -47,8 +47,8 @@ var svg = d3.select("#vis2").append("svg")
 			var dt = new Date(d["Start Date"]);
 			var mth = dt.getMonth();
 			var dr = d["Duration"]/60;
-			var zip = d["Zip Code"];
-			if(zip == "95113"){
+			var stn = d["Start Terminal"];
+			if(stn == stationid){
 				if(mth == 0){
 					drjan += dr;
 					jan++;
@@ -112,7 +112,7 @@ var svg = d3.select("#vis2").append("svg")
 	months.push({dur : droct, count : oct, num : 10, avg : droct/oct});
 	months.push({dur : drnov, count : nov, num : 11, avg : drnov/nov});
 	months.push({dur : drdec, count : dec, num : 12, avg : drdec/dec});	
-// console.log(months);
+console.log(months);
 	var valueline = d3.line()
 		.x(function(d){return x(d.num);})
 		.y(function(d){return y(d.avg);});
@@ -156,4 +156,3 @@ var svg = d3.select("#vis2").append("svg")
 		.text("Month");	
 	})
 }
-v2();
