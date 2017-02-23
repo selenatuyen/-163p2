@@ -112,6 +112,7 @@ var svg = d3.select("#vis2").append("svg")
 	months.push({dur : droct, count : oct, num : 10, avg : droct/oct});
 	months.push({dur : drnov, count : nov, num : 11, avg : drnov/nov});
 	months.push({dur : drdec, count : dec, num : 12, avg : drdec/dec});	
+
 // console.log(months);
 	var valueline = d3.line()
 		.x(function(d){return x(d.num);})
@@ -138,7 +139,21 @@ var svg = d3.select("#vis2").append("svg")
       .enter().append("circle")
         .attr("r", 3.5)
         .attr("cx", function(d) { return x(d.num); })
-        .attr("cy", function(d) { return y(d.avg); });
+        .attr("cy", function(d) { return y(d.avg); })
+        .on("mouseover", function(d){
+				svg.select("circle").transition()
+					.duration(200)
+					.style("fill", "#800000");
+			})
+			.on("mouseout", function(d){
+				svg.select("circle").transition()
+					.duration(500)
+					.style("fill", "black");
+			})
+			.on("click", function(d){
+				d3.select('#vis3').text("");
+				v3(d.num);
+		});
 
 	svg.append("text")
 		.attr("transform", "rotate(-90)")

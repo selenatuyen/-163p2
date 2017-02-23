@@ -429,7 +429,6 @@ function v1() {
 					.style("opacity", 0);
 			});
 
-
 //======stations============
 		//station 2
 		svg.append("circle")
@@ -437,6 +436,16 @@ function v1() {
 			.attr("cy", 350)
 			.attr("r", sum2/6)
 			.style("fill", "#7a7671")
+			.on("mouseover", function(d){
+				svg.select("circle").transition()
+					.duration(200)
+					.style("fill", "#a9a6a2");
+			})
+			.on("mouseout", function(d){
+				svg.select("circle").transition()
+					.duration(500)
+					.style("fill", "#7a7671");
+			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				v2(2);
