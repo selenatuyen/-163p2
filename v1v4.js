@@ -3,11 +3,11 @@ function v1() {
 	var width = 960;
     var	height = 500;
 
-	var svg = d3.select("body").append("svg")
+	var svg = d3.select("#vis1").append("svg")
 	    .attr("width", width)
 	    .attr("height", height);
 	
-	var div = d3.select("body").append("div")   
+	var div = d3.select("#vis1").append("div")   
 	    .attr("class", "tooltip")               
 	    .style("opacity", 0);
 
@@ -438,7 +438,7 @@ function v1() {
 			.attr("r", sum2/6)
 			.style("fill", "#7a7671")
 			.on("click", function(){
-				d3.selectAll("svg").remove();
+				d3.select('#vis2').text("");
 				v2(2);
 			}); 
 		//station 9
@@ -448,7 +448,7 @@ function v1() {
 			.attr("r", sum9/6)
 			.style("fill", "#f9757c")
 			.on("click", function(){
-				d3.selectAll("svg").remove();
+				d3.select('#vis2').text("");
 				v2(9);
 			});
 		//station 16
@@ -458,7 +458,7 @@ function v1() {
 			.attr("r", sum16/6)
 			.style("fill", "#66b78f")
 			.on("click", function(){
-				d3.selectAll("svg").remove();
+				d3.select('#vis2').text("");
 				v2(16);
 			});
 		//station 80
@@ -468,7 +468,7 @@ function v1() {
 			.attr("r", sum80/6)
 			.style("fill", "#ffbd68")
 			.on("click", function(){
-				d3.selectAll("svg").remove();
+				d3.select('#vis2').text("");
 				v2(80);
 			});		
 		//station 84
@@ -478,7 +478,7 @@ function v1() {
 			.attr("r", sum84/6)
 			.style("fill", "#5589a0")
 			.on("click", function(){
-				d3.selectAll("svg").remove();
+				d3.select('#vis2').text("");
 				v2(84);
 			});	
 
