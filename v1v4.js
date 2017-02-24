@@ -432,17 +432,18 @@ function v1() {
 //======stations============
 		//station 2
 		svg.append("circle")
+			.attr("id", "st2")
 			.attr("cx", 230)
 			.attr("cy", 350)
 			.attr("r", sum2/6)
 			.style("fill", "#7a7671")
 			.on("mouseover", function(d){
-				svg.select("circle").transition()
+				svg.select('#st2').transition()
 					.duration(200)
 					.style("fill", "#a9a6a2");
 			})
 			.on("mouseout", function(d){
-				svg.select("circle").transition()
+				svg.select('#st2').transition()
 					.duration(500)
 					.style("fill", "#7a7671");
 			})
@@ -452,40 +453,84 @@ function v1() {
 			}); 
 		//station 9
 		svg.append("circle")
+			.attr("id", "st9")
 			.attr("cx", 700)
 			.attr("cy", 250)
 			.attr("r", sum9/6)
 			.style("fill", "#f9757c")
+			.on("mouseover", function(d){
+				svg.select('#st9').transition()
+					.duration(200)
+					.style("fill", "#fa858a");
+			})
+			.on("mouseout", function(d){
+				svg.select('#st9').transition()
+					.duration(500)
+					.style("fill", "#f9757c");
+			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				v2(9);
 			});
 		//station 16
 		svg.append("circle")
+			.attr("id", "st16")
 			.attr("cx", 500)
 			.attr("cy", 450)
 			.attr("r", sum16/6)
 			.style("fill", "#66b78f")
+			.on("mouseover", function(){
+				svg.select('#st16').transition()
+					.duration(200)
+					.style("fill", "#74be99");
+			})
+			.on("mouseout", function(){
+				svg.select('#st16').transition()
+					.duration(500)
+					.style("fill", "#66b78f");
+			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				v2(16);
 			});
 		//station 80
 		svg.append("circle")
+			.attr("id", "st80")
 			.attr("cx", 500)
 			.attr("cy", 70)
 			.attr("r", sum80/6)
 			.style("fill", "#ffbd68")
+			.on("mouseover", function(){
+				svg.select('#st80').transition()
+					.duration(200)
+					.style("fill", "#ffc880");
+			})
+			.on("mouseout", function(){
+				svg.select('#st80').transition()
+					.duration(500)
+					.style("fill", "#ffbd68");
+			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				v2(80);
 			});		
 		//station 84
 		svg.append("circle")
+			.attr("id", "st84")
 			.attr("cx", 300)
 			.attr("cy", 150)
 			.attr("r", sum84/6)
 			.style("fill", "#5589a0")
+			.on("mouseover", function(){
+				svg.select('#st84').transition()
+					.duration(500)
+					.style("fill", "#588fa7");
+			})
+			.on("mouseout", function(){
+				svg.select('#st84').transition()
+					.duration(200)
+					.style("fill", "#5589a0")
+			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				v2(84);
