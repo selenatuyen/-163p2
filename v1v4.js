@@ -440,7 +440,7 @@ function v1() {
 			.on("mouseover", function(d){
 				svg.select('#st2').transition()
 					.duration(200)
-					.style("fill", "#a9a6a2");
+					.style("fill", "#5d5a56");
 			})
 			.on("mouseout", function(d){
 				svg.select('#st2').transition()
@@ -461,7 +461,7 @@ function v1() {
 			.on("mouseover", function(d){
 				svg.select('#st9').transition()
 					.duration(200)
-					.style("fill", "#fa858a");
+					.style("fill", "#f73b45");
 			})
 			.on("mouseout", function(d){
 				svg.select('#st9').transition()
@@ -482,7 +482,7 @@ function v1() {
 			.on("mouseover", function(){
 				svg.select('#st16').transition()
 					.duration(200)
-					.style("fill", "#74be99");
+					.style("fill", "#499c73");
 			})
 			.on("mouseout", function(){
 				svg.select('#st16').transition()
@@ -503,7 +503,7 @@ function v1() {
 			.on("mouseover", function(){
 				svg.select('#st80').transition()
 					.duration(200)
-					.style("fill", "#ffc880");
+					.style("fill", "#ff9c1a");
 			})
 			.on("mouseout", function(){
 				svg.select('#st80').transition()
@@ -524,7 +524,7 @@ function v1() {
 			.on("mouseover", function(){
 				svg.select('#st84').transition()
 					.duration(500)
-					.style("fill", "#588fa7");
+					.style("fill", "#467386");
 			})
 			.on("mouseout", function(){
 				svg.select('#st84').transition()
