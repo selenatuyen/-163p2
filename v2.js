@@ -1,6 +1,6 @@
 //line w/ yearly points of avg trip durations
 function v2(stationid) {
-	var margin = {top: 20, right: 20, bottom: 30, left: 60},
+	var margin = {top: 30, right: 20, bottom: 30, left: 60},
 		width = 960 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
 
@@ -39,6 +39,13 @@ var svg = d3.select("#vis2").append("svg")
 	var droct = 0;
 	var drnov = 0;
 	var drdec = 0;
+	svg.append("text")
+		.attr("x", (width/2))
+		.attr("y", 0 - (margin.top/2))
+		.attr("text-anchor", "middle")
+		.style("font-size", "18px")
+		.style("font-weight", "bold")
+       .text("Average Trip Duration for Station " + stationid);
 	d3.csv('201608_trip_data.csv', function(err, data){
 		if(err){
 			console.log(err);
@@ -113,7 +120,7 @@ var svg = d3.select("#vis2").append("svg")
 	months.push({dur : drnov, count : nov, num : 11, avg : drnov/nov});
 	months.push({dur : drdec, count : dec, num : 12, avg : drdec/dec});	
 
-// console.log(months);
+console.log(months);
 	var valueline = d3.line()
 		.x(function(d){return x(d.num);})
 		.y(function(d){return y(d.avg);});
@@ -137,20 +144,22 @@ var svg = d3.select("#vis2").append("svg")
     svg.selectAll("dot")
         .data(months)
       .enter().append("circle")
+      	.attr("id", "datapoints")
         .attr("r", 3.5)
         .attr("cx", function(d) { return x(d.num); })
         .attr("cy", function(d) { return y(d.avg); })
-        .on("mouseover", function(d){
-				svg.select("circle").transition()
+        .style("fill", "#000000")
+        .on("mouseover", function(){
+				d3.select(this).transition()
 					.duration(200)
 					.style("fill", "#800000");
 			})
-			.on("mouseout", function(d){
-				svg.select("circle").transition()
+		.on("mouseout", function(){
+				d3.select(this).transition()
 					.duration(500)
-					.style("fill", "black");
+					.style("fill", "#000000");
 			})
-			.on("click", function(d){
+		.on("click", function(d){
 				d3.select('#vis3').text("");
 				v3(d.num);
 		});

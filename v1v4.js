@@ -83,7 +83,7 @@ function v1() {
 	console.log("station 16- "+ "2:" + station16[0] + ", 9:" + station16[7] + ", 80:" + station16[14] + ", 84:" + station16[15] + " sum:" + sum16);
 	console.log("station 80- "+ "2:" + station80[0] + ", 9:" + station80[7] + ", 16:" + station80[13] + ", 84:" + station80[15] + " sum:" + sum80);
 	console.log("station 84- "+ "2:" + station84[0] + ", 9:" + station84[7] + ", 16:" + station84[13] + ", 80:" + station84[14] + " sum:" + sum84);
-	//station 9 lines --- red			
+//station 9 lines --- red			
 		svg.append("line")
 			.attr("x1", 700)
 			.attr("y1", 280)
@@ -103,7 +103,7 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});
+		});
 		svg.append("line")
 			.attr("x1", 700)
 			.attr("y1", 270)
@@ -123,7 +123,7 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});
+		});
 		svg.append("line")
 			.attr("x1", 700)
 			.attr("y1", 250)
@@ -143,7 +143,7 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});
+		});
 		svg.append("line")
 			.attr("x1", 700)
 			.attr("y1", 220)
@@ -163,7 +163,7 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});		
+		});		
 //station 2 lines --- purple
 		svg.append("line")
 			.attr("x1", 227)
@@ -184,7 +184,7 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});
+		});
 		svg.append("line")
 			.attr("x1", 210)
 			.attr("y1", 310)
@@ -204,7 +204,7 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});			
+		});			
 		svg.append("line")
 			.attr("x1", 280)
 			.attr("y1", 380)
@@ -224,7 +224,7 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});	
+		});	
 //station 16 lines --- green
 		svg.append("line")
 			.attr("x1", 230)
@@ -245,7 +245,7 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});
+		});
 		svg.append("line")
 			.attr("x1", 500)
 			.attr("y1", 490)
@@ -265,7 +265,7 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});
+		});
 		svg.append("line")
 			.attr("x1", 500)
 			.attr("y1", 490)
@@ -285,9 +285,9 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});	
+		});	
 //station 84 lines --- blue
-	svg.append("line")
+		svg.append("line")
 			.attr("x1", 300)
 			.attr("y1", 180)
 			.attr("x2", 700)
@@ -306,8 +306,8 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			}); 
-	svg.append("line")
+		}); 
+		svg.append("line")
 			.attr("x1", 300)
 			.attr("y1", 180)
 			.attr("x2", 240)
@@ -326,8 +326,8 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			}); 	
-	svg.append("line")
+		}); 	
+		svg.append("line")
 			.attr("x1", 300)
 			.attr("y1", 180)
 			.attr("x2", 500)
@@ -346,8 +346,8 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			}); 
-	svg.append("line")
+		}); 
+		svg.append("line")
 			.attr("x1", 300)
 			.attr("y1", 170)
 			.attr("x2", 500)
@@ -366,9 +366,9 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			}); 						
+		}); 						
 //station 80 lines --- orange
-	svg.append("line")
+		svg.append("line")
 			.attr("x1", 500)
 			.attr("y1", 40)
 			.attr("x2", 700)
@@ -387,8 +387,8 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			}); 
-	svg.append("line")
+		}); 
+		svg.append("line")
 			.attr("x1", 520)
 			.attr("y1", 40)
 			.attr("x2", 520)
@@ -407,8 +407,8 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			}); 
-	svg.append("line")
+		}); 
+		svg.append("line")
 			.attr("x1", 510)
 			.attr("y1", 50)
 			.attr("x2", 300)
@@ -427,10 +427,10 @@ function v1() {
 				div.transition()
 					.duration(500)
 					.style("opacity", 0);
-			});
+		});
 
 //======stations============
-		//station 2
+	//station 2
 		svg.append("circle")
 			.attr("id", "st2")
 			.attr("cx", 230)
@@ -449,9 +449,10 @@ function v1() {
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
+				d3.select('#vis3').text("");
 				v2(2);
-			}); 
-		//station 9
+		}); 
+	//station 9
 		svg.append("circle")
 			.attr("id", "st9")
 			.attr("cx", 700)
@@ -470,9 +471,10 @@ function v1() {
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
+				d3.select('#vis3').text("");
 				v2(9);
-			});
-		//station 16
+		});
+	//station 16
 		svg.append("circle")
 			.attr("id", "st16")
 			.attr("cx", 500)
@@ -491,9 +493,10 @@ function v1() {
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
+				d3.select('#vis3').text("");
 				v2(16);
-			});
-		//station 80
+		});
+	//station 80
 		svg.append("circle")
 			.attr("id", "st80")
 			.attr("cx", 500)
@@ -512,9 +515,10 @@ function v1() {
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
+				d3.select('#vis3').text("");
 				v2(80);
-			});		
-		//station 84
+		});		
+	//station 84
 		svg.append("circle")
 			.attr("id", "st84")
 			.attr("cx", 300)
@@ -533,8 +537,9 @@ function v1() {
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
+				d3.select('#vis3').text("");
 				v2(84);
-			});	
+		});	
 
 		var legend = svg.append("g")
 			.attr("class", "legend")

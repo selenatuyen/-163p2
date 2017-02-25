@@ -1,20 +1,65 @@
 //bar of avg temp with high/low toggle
 function v3(monthData) {
-	var margin = {top: 20, right: 20, bottom: 30, left: 60},
+	var margin = {top: 30, right: 20, bottom: 34, left: 60},
 	width = 960 - margin.left - margin.right,
 	height = 500 - margin.top - margin.bottom;
-
+	var monthWord;
 	var x = d3.scaleBand()
 				.range([0, width])
 				.padding(0.1);
 	var y = d3.scaleLinear()
 				.range([height, 0]);
+	switch(monthData){
+		case 1:
+			monthWord = "January";
+			break;
+		case 2:
+			monthWord = "Febuary";
+			break;
+		case 3:
+			monthWord = "March";
+			break;
+		case 4:
+			monthWord = "April";
+			break;
+		case 5:
+			monthWord = "May";
+			break;
+		case 6:
+			monthWord = "June";
+			break;
+		case 7:
+			monthWord = "July";
+			break;
+		case 8:
+			monthWord = "August";
+			break;
+		case 9:
+			monthWord = "September";
+			break;
+		case 10:
+			monthWord = "October";
+			break;
+		case 11:
+			monthWord = "November";
+			break;
+		case 12:
+			monthWord = "December";
+			break;
+	}
 
 	var svg = d3.select("#vis3").append("svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 	.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	svg.append("text")
+		.attr("x", (width/2))
+		.attr("y", 0 - (margin.top/2) + 1)
+		.attr("text-anchor", "middle")
+		.style("font-size", "18px")
+		.style("font-weight", "bold")
+        .text("Average Temperature for " + monthWord);
 
 	d3.csv('201608_weather_data.csv', function(err, data){
 		if(err){
@@ -34,7 +79,7 @@ function v3(monthData) {
 			var zip = d["ZIP"];
 			if(zip == "95113"){
 				var dt = new Date(d["PDT"]);
-				var mth = dt.getMonth();
+				var mth = dt.getMonth() + 1;
 				if(mth == selectedMonth){
 					var day = dt.getDay();
 					if(i <= dyCount){
