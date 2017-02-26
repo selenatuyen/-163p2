@@ -97,7 +97,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station9[0] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -117,7 +118,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station9[13] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -137,7 +139,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station9[14] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -157,7 +160,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station9[15] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -178,7 +182,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station2[7] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -198,7 +203,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station2[15] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -218,7 +224,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station2[13] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -239,7 +246,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station16[0] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -259,7 +267,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station16[7] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -279,7 +288,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station16[14] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -300,7 +310,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station84[7] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -320,7 +331,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station84[0] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -340,7 +352,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station84[13] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -360,7 +373,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station84[14] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -381,7 +395,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station80[7] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -401,7 +416,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station80[13] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -421,7 +437,8 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station80[15] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px");
+					.style("top", (d3.event.pageY) + "px")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				div.transition()
@@ -440,7 +457,8 @@ function v1() {
 			.on("mouseover", function(d){
 				svg.select('#st2').transition()
 					.duration(200)
-					.style("fill", "#5d5a56");
+					.style("fill", "#5d5a56")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				svg.select('#st2').transition()
@@ -450,6 +468,7 @@ function v1() {
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				d3.select('#vis3').text("");
+				d3.select("form").remove();
 				v2(2);
 		}); 
 	//station 9
@@ -462,7 +481,8 @@ function v1() {
 			.on("mouseover", function(d){
 				svg.select('#st9').transition()
 					.duration(200)
-					.style("fill", "#f73b45");
+					.style("fill", "#f73b45")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
 				svg.select('#st9').transition()
@@ -472,6 +492,7 @@ function v1() {
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				d3.select('#vis3').text("");
+				d3.select("form").remove();
 				v2(9);
 		});
 	//station 16
@@ -484,7 +505,8 @@ function v1() {
 			.on("mouseover", function(){
 				svg.select('#st16').transition()
 					.duration(200)
-					.style("fill", "#499c73");
+					.style("fill", "#499c73")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(){
 				svg.select('#st16').transition()
@@ -494,6 +516,7 @@ function v1() {
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				d3.select('#vis3').text("");
+				d3.select("form").remove();
 				v2(16);
 		});
 	//station 80
@@ -506,7 +529,8 @@ function v1() {
 			.on("mouseover", function(){
 				svg.select('#st80').transition()
 					.duration(200)
-					.style("fill", "#ff9c1a");
+					.style("fill", "#ff9c1a")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(){
 				svg.select('#st80').transition()
@@ -516,6 +540,7 @@ function v1() {
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				d3.select('#vis3').text("");
+				d3.select("form").remove();
 				v2(80);
 		});		
 	//station 84
@@ -528,7 +553,8 @@ function v1() {
 			.on("mouseover", function(){
 				svg.select('#st84').transition()
 					.duration(500)
-					.style("fill", "#467386");
+					.style("fill", "#467386")
+					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(){
 				svg.select('#st84').transition()
@@ -538,6 +564,7 @@ function v1() {
 			.on("click", function(){
 				d3.select('#vis2').text("");
 				d3.select('#vis3').text("");
+				d3.select("form").remove();
 				v2(84);
 		});	
 

@@ -152,7 +152,8 @@ console.log(months);
         .on("mouseover", function(){
 				d3.select(this).transition()
 					.duration(200)
-					.style("fill", "#800000");
+					.style("fill", "#808080")
+					.style("cursor", "pointer");
 			})
 		.on("mouseout", function(){
 				d3.select(this).transition()
@@ -161,6 +162,7 @@ console.log(months);
 			})
 		.on("click", function(d){
 				d3.select('#vis3').text("");
+				d3.select("form").remove();
 				v3(d.num);
 		});
 
