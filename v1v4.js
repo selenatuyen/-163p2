@@ -78,11 +78,11 @@ function v1() {
 		function add(a, b) {
 		    return a + b;
 		}
-	console.log("station 2- "+ "9:" + station2[7] + ", 16:" + station2[13] + ", 80:" + station2[14] + ", 84:" + station2[15] + " sum:" + sum2);
-	console.log("station 9- "+ "2:" + station9[0] + ", 16:" + station9[13] + ", 80:" + station9[14] + ", 84:" + station9[15] + " sum:" + sum9);
-	console.log("station 16- "+ "2:" + station16[0] + ", 9:" + station16[7] + ", 80:" + station16[14] + ", 84:" + station16[15] + " sum:" + sum16);
-	console.log("station 80- "+ "2:" + station80[0] + ", 9:" + station80[7] + ", 16:" + station80[13] + ", 84:" + station80[15] + " sum:" + sum80);
-	console.log("station 84- "+ "2:" + station84[0] + ", 9:" + station84[7] + ", 16:" + station84[13] + ", 80:" + station84[14] + " sum:" + sum84);
+	// console.log("station 2- "+ "9:" + station2[7] + ", 16:" + station2[13] + ", 80:" + station2[14] + ", 84:" + station2[15] + " sum:" + sum2);
+	// console.log("station 9- "+ "2:" + station9[0] + ", 16:" + station9[13] + ", 80:" + station9[14] + ", 84:" + station9[15] + " sum:" + sum9);
+	// console.log("station 16- "+ "2:" + station16[0] + ", 9:" + station16[7] + ", 80:" + station16[14] + ", 84:" + station16[15] + " sum:" + sum16);
+	// console.log("station 80- "+ "2:" + station80[0] + ", 9:" + station80[7] + ", 16:" + station80[13] + ", 84:" + station80[15] + " sum:" + sum80);
+	// console.log("station 84- "+ "2:" + station84[0] + ", 9:" + station84[7] + ", 16:" + station84[13] + ", 80:" + station84[14] + " sum:" + sum84);
 //station 9 lines --- red			
 		svg.append("line")
 			.attr("x1", 700)
@@ -97,7 +97,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station9[0] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -118,7 +118,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station9[13] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -139,7 +139,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station9[14] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -160,7 +160,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station9[15] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -182,7 +182,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station2[7] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -203,7 +203,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station2[15] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -224,7 +224,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station2[13] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -246,7 +246,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station16[0] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -267,7 +267,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station16[7] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -288,7 +288,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station16[14] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -310,7 +310,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station84[7] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -331,7 +331,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station84[0] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -352,7 +352,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station84[13] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -373,7 +373,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station84[14] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -395,7 +395,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station80[7] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -416,7 +416,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station80[13] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -437,7 +437,7 @@ function v1() {
 					.style("opacity", .9);
 				div.text(station80[15] + " Trips")
 					.style("left", (d3.event.pageX) + "px")
-					.style("top", (d3.event.pageY) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
 					.style("cursor", "pointer");
 			})
 			.on("mouseout", function(d){
@@ -459,11 +459,20 @@ function v1() {
 					.duration(200)
 					.style("fill", "#5d5a56")
 					.style("cursor", "pointer");
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(sum2 + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY-20) + "px");	
 			})
 			.on("mouseout", function(d){
 				svg.select('#st2').transition()
 					.duration(500)
 					.style("fill", "#7a7671");
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);	
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
@@ -483,11 +492,20 @@ function v1() {
 					.duration(200)
 					.style("fill", "#f73b45")
 					.style("cursor", "pointer");
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(sum9 + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY-20) + "px");	
 			})
 			.on("mouseout", function(d){
 				svg.select('#st9').transition()
 					.duration(500)
 					.style("fill", "#f9757c");
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);	
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
@@ -507,11 +525,20 @@ function v1() {
 					.duration(200)
 					.style("fill", "#499c73")
 					.style("cursor", "pointer");
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(sum16 + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY-20) + "px");
 			})
 			.on("mouseout", function(){
 				svg.select('#st16').transition()
 					.duration(500)
 					.style("fill", "#66b78f");
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);	
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
@@ -531,11 +558,20 @@ function v1() {
 					.duration(200)
 					.style("fill", "#ff9c1a")
 					.style("cursor", "pointer");
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(sum80 + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY-20) + "px");	
 			})
 			.on("mouseout", function(){
 				svg.select('#st80').transition()
 					.duration(500)
 					.style("fill", "#ffbd68");
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);	
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");
@@ -555,11 +591,20 @@ function v1() {
 					.duration(500)
 					.style("fill", "#467386")
 					.style("cursor", "pointer");
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(sum84 + " Trips")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY-20) + "px");	
 			})
 			.on("mouseout", function(){
 				svg.select('#st84').transition()
 					.duration(200)
-					.style("fill", "#5589a0")
+					.style("fill", "#5589a0");
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);	
 			})
 			.on("click", function(){
 				d3.select('#vis2').text("");

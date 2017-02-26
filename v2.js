@@ -15,6 +15,10 @@ var svg = d3.select("#vis2").append("svg")
   .append("g")
   	.attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
+var div = d3.select("#vis2").append("div")   
+	    .attr("class", "tooltip")               
+	    .style("opacity", 0);
+
 	var jan = 0;
 	var feb = 0;
 	var mar = 0;
@@ -107,20 +111,20 @@ var svg = d3.select("#vis2").append("svg")
 			}
 		})	
 	var months = [];
-	months.push({dur : drjan, count : jan, num : 1, avg : drjan/jan});
-	months.push({dur : drfeb, count : feb, num : 2, avg : drfeb/feb});
-	months.push({dur : drmar, count : mar, num : 3, avg : drmar/mar});
-	months.push({dur : drapr, count : apr, num : 4, avg : drapr/apr});
-	months.push({dur : drmay, count : may, num : 5, avg : drmay/may});
-	months.push({dur : drjun, count : jun, num : 6, avg : drjun/jun});
-	months.push({dur : drjul, count : jul, num : 7, avg : drjul/jul});
-	months.push({dur : draug, count : aug, num : 8, avg : draug/aug});
-	months.push({dur : drsep, count : sep, num : 9, avg : drsep/sep});
-	months.push({dur : droct, count : oct, num : 10, avg : droct/oct});
-	months.push({dur : drnov, count : nov, num : 11, avg : drnov/nov});
-	months.push({dur : drdec, count : dec, num : 12, avg : drdec/dec});	
+	months.push({dur : drjan, count : jan, num : 1, avg : drjan/jan, word : "January"});
+	months.push({dur : drfeb, count : feb, num : 2, avg : drfeb/feb, word : "Febuary"});
+	months.push({dur : drmar, count : mar, num : 3, avg : drmar/mar, word : "March"});
+	months.push({dur : drapr, count : apr, num : 4, avg : drapr/apr, word : "April"});
+	months.push({dur : drmay, count : may, num : 5, avg : drmay/may, word : "May"});
+	months.push({dur : drjun, count : jun, num : 6, avg : drjun/jun, word : "June"});
+	months.push({dur : drjul, count : jul, num : 7, avg : drjul/jul, word : "July"});
+	months.push({dur : draug, count : aug, num : 8, avg : draug/aug, word : "August"});
+	months.push({dur : drsep, count : sep, num : 9, avg : drsep/sep, word : "September"});
+	months.push({dur : droct, count : oct, num : 10, avg : droct/oct, word : "October"});
+	months.push({dur : drnov, count : nov, num : 11, avg : drnov/nov, word : "November"});
+	months.push({dur : drdec, count : dec, num : 12, avg : drdec/dec, word : "Decemeber"});	
 
-console.log(months);
+// console.log(months);
 	var valueline = d3.line()
 		.x(function(d){return x(d.num);})
 		.y(function(d){return y(d.avg);});
@@ -149,16 +153,26 @@ console.log(months);
         .attr("cx", function(d) { return x(d.num); })
         .attr("cy", function(d) { return y(d.avg); })
         .style("fill", "#000000")
-        .on("mouseover", function(){
+        .on("mouseover", function(d){
 				d3.select(this).transition()
 					.duration(200)
 					.style("fill", "#808080")
 					.style("cursor", "pointer");
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.text(d.word + ": " + Math.round(d.avg) + " minutes" )
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY-20) + "px")
+					.style("cursor", "pointer");	
 			})
 		.on("mouseout", function(){
 				d3.select(this).transition()
 					.duration(500)
 					.style("fill", "#000000");
+				div.transition()
+					.duration(500)
+					.style("opacity", 0);	
 			})
 		.on("click", function(d){
 				d3.select('#vis3').text("");

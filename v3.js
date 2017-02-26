@@ -8,7 +8,10 @@ function v3(monthData) {
 				.range([0, width])
 				.padding(0.1);
 	var y = d3.scaleLinear()
-				.range([height, 0]);
+				.range([height, 50]);
+	var div = d3.select("#vis3").append("div")   
+	    .attr("class", "tooltip")               
+	    .style("opacity", 0);			
 	switch(monthData){
 		case 1:
 			monthWord = "January";
@@ -118,7 +121,26 @@ labels = form.selectAll("label")
 			.attr("x", function(d){return x(d.dy);})
 			.attr("width", x.bandwidth())
 			.attr("y",  function(d){return y(d.tmp);})
-			.attr("height", function(d) {return height - y(d.tmp);});
+			.attr("height", function(d) {return height - y(d.tmp);})
+		.on("mouseover", function(d){
+			d3.select(this).transition()
+					.duration(200)
+					.style("fill", "#808080");
+			div.transition()
+				.duration(200)
+				.style("opacity", .9);
+			div.text("Day: " + d.dy+ ": " + d.tmp + "°F" )
+				.style("left", (d3.event.pageX) + "px")
+				.style("top", (d3.event.pageY-20) + "px");
+		})
+		.on("mouseout", function(){
+			d3.select(this).transition()
+				.duration(500)
+				.style("fill", "#004080");
+			div.transition()
+				.duration(500)
+				.style("opacity", 0);	
+		});
 		//x axis
 		svg.append("g")
 			.attr("transform", "translate(0," + height + ")")
@@ -146,7 +168,9 @@ labels = form.selectAll("label")
 		if(d3.selectAll('input').property('checked')){
 			// console.log(choice);
 			d3.select('#vis3').text("");
-
+		var div = d3.select("#vis3").append("div")   
+	    .attr("class", "tooltip")               
+	    .style("opacity", 0);	
 			var svg = d3.select("#vis3").append("svg")
 				.attr("width", width + margin.left + margin.right)
 				.attr("height", height + margin.top + margin.bottom)
@@ -205,7 +229,20 @@ labels = form.selectAll("label")
 						.attr("x", function(d){return x(d.dy);})
 						.attr("width", x.bandwidth())
 						.attr("y",  function(d){return y(d.tmp);})
-						.attr("height", function(d) {return height - y(d.tmp);});
+						.attr("height", function(d) {return height - y(d.tmp);})
+					.on("mouseover", function(d){
+						div.transition()
+							.duration(200)
+							.style("opacity", .9);
+						div.text("Day: " + d.dy+ ": " + d.tmp + "°F")
+							.style("left", (d3.event.pageX) + "px")
+							.style("top", (d3.event.pageY-20) + "px");
+					})
+					.on("mouseout", function(){
+						div.transition()
+							.duration(500)
+							.style("opacity", 0);	
+					});
 					//x axis
 					svg.append("g")
 						.attr("transform", "translate(0," + height + ")")
@@ -240,7 +277,7 @@ labels = form.selectAll("label")
 					   .attr("x", "-48")
 					   .attr("y", "-5")
 					   .attr("height", "10")
-					   .text("Higher");
+					   .text("Lower");
 					legend.append("rect")
 					   .attr("x", "-60")
 					   .attr("y", "-30")
@@ -251,8 +288,7 @@ labels = form.selectAll("label")
 					   .attr("x", "-48")
 					   .attr("y", "-20")
 					   .attr("height", "10")
-					   .text("Lower");
-
+					   .text("Higher");
 			}
 			else{
 				d3.select('#vis3').text("");
